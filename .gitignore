@@ -16,6 +16,12 @@ local.properties
 .settings/
 .loadpath
 
+#################
+## Maven
+#################
+target/
+target/*.*
+
 # External tool builders
 .externalToolBuilders/
 

@@ -1,0 +1,209 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000077660895, pid=7368, tid=8080
+#
+# JRE version: 7.0-b147
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0-b17 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [ntdll.dll+0x50895]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002203800):  JavaThread "main" [_thread_in_Java, id=8080, stack(0x0000000002700000,0x0000000002800000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xffffffffffffffff
+
+Registers:
+RAX=0x00000000027fdfc8, RBX=0x0000000000000002, RCX=0x00000000027fe098, RDX=0x00000000027fe008
+RSP=0x00000000027fdfb8, RBP=0x000007fefab99360, RSI=0x0000000000000020, RDI=0x0000000000000000
+R8 =0x00000000027e6000, R9 =0x0000000000000003, R10=0x0000000000000000, R11=0x000000000000e9dd
+R12=0x0000000000000000, R13=0x0000000000000050, R14=0x0000000000000003, R15=0x0000000002203800
+RIP=0x0000000077660895, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x00000000027fdfb8)
+0x00000000027fdfb8:   0000000000000202 000000007761b239
+0x00000000027fdfc8:   000007fffffd6000 0000000007970f70
+0x00000000027fdfd8:   0000000000000006 0000000000000000
+0x00000000027fdfe8:   0000000002203801 0000000007379e50
+0x00000000027fdff8:   000000005f81ad48 0000000007970f70
+0x00000000027fe008:   0000000002800000 00000000027e6000
+0x00000000027fe018:   000000000737a188 00000000027fe201
+0x00000000027fe028:   0000000000000000 00000000027fe1e0
+0x00000000027fe038:   0000000100000200 0000000000000008
+0x00000000027fe048:   0000000007990720 00000000027fe840
+0x00000000027fe058:   000000000283743a 00000000028373d0
+0x00000000027fe068:   0000000000000000 0000000000000000
+0x00000000027fe078:   00000000027fe840 0000000102257671
+0x00000000027fe088:   0000000007990770 00000000027fe8a0
+0x00000000027fe098:   0000000002806330 0000000002805350
+0x00000000027fe0a8:   0000000000000000 00000000f104aba0 
+
+Instructions: (pc=0x0000000077660895)
+0x0000000077660875:   d0 00 00 00 4c 89 a1 d8 00 00 00 4c 89 a9 e0 00
+0x0000000077660885:   00 00 4c 89 b1 e8 00 00 00 4c 89 b9 f0 00 00 00
+0x0000000077660895:   0f ae 81 00 01 00 00 0f 29 81 a0 01 00 00 0f 29
+0x00000000776608a5:   89 b0 01 00 00 0f 29 91 c0 01 00 00 0f 29 99 d0 
+
+
+Register to memory mapping:
+
+RAX=0x00000000027fdfc8 is pointing into the stack for thread: 0x0000000002203800
+RBX=0x0000000000000002 is an unknown value
+RCX=0x00000000027fe098 is pointing into the stack for thread: 0x0000000002203800
+RDX=0x00000000027fe008 is pointing into the stack for thread: 0x0000000002203800
+RSP=0x00000000027fdfb8 is pointing into the stack for thread: 0x0000000002203800
+RBP=0x000007fefab99360 is an unknown value
+RSI=0x0000000000000020 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x00000000027e6000 is pointing into the stack for thread: 0x0000000002203800
+R9 =0x0000000000000003 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x000000000000e9dd is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000000000050 is an unknown value
+R14=0x0000000000000003 is an unknown value
+R15=0x0000000002203800 is a thread
+
+
+Stack: [0x0000000002700000,0x0000000002800000],  sp=0x00000000027fdfb8,  free space=1015k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ntdll.dll+0x50895]  RtlCaptureContext+0x85
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+v  blob 0x00000000028374ff
+j  java.lang.String.equals(Ljava/lang/Object;)Z+8
+j  com.sun.org.apache.xerces.internal.parsers.AbstractDOMParser.xmlDecl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V+77
+j  com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.xmlDecl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V+16
+j  com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.xmlDecl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V+41
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanXMLDeclOrTextDecl(Z)V+132
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$XMLDeclDriver.next()I+217
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next()I+4
+j  com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next()I+31
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Z)Z+9
+j  com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Z)Z+123
+j  com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V+29
+j  com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V+9
+j  com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Lorg/xml/sax/InputSource;)V+43
+j  com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Lorg/xml/sax/InputSource;)Lorg/w3c/dom/Document;+57
+j  org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(Lorg/xml/sax/InputSource;Lorg/xml/sax/EntityResolver;Lorg/xml/sax/ErrorHandler;IZ)Lorg/w3c/dom/Document;+70
+j  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(Lorg/xml/sax/InputSource;Lorg/springframework/core/io/Resource;)I+24
+j  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(Lorg/springframework/core/io/support/EncodedResource;)I+162
+j  org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(Lorg/springframework/core/io/Resource;)I+9
+j  org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions([Lorg/springframework/core/io/Resource;)I+30
+j  org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(Ljava/lang/String;Ljava/util/Set;)I+60
+j  org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(Ljava/lang/String;)I+3
+j  org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions([Ljava/lang/String;)I+30
+j  org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(Lorg/springframework/beans/factory/xml/XmlBeanDefinitionReader;)V+26
+j  org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(Lorg/springframework/beans/factory/support/DefaultListableBeanFactory;)V+33
+j  org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory()V+35
+j  org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory()Lorg/springframework/beans/factory/config/ConfigurableListableBeanFactory;+1
+j  org.springframework.context.support.AbstractApplicationContext.refresh()V+12
+j  org.springframework.context.support.ClassPathXmlApplicationContext.<init>([Ljava/lang/String;ZLorg/springframework/context/ApplicationContext;)V+15
+j  org.springframework.context.support.ClassPathXmlApplicationContext.<init>(Ljava/lang/String;)V+11
+j  com.mycompany.avt_jms.App.main([Ljava/lang/String;)V+6
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000611e000 JavaThread "Service Thread" daemon [_thread_blocked, id=7284, stack(0x0000000006530000,0x0000000006630000)]
+  0x0000000006118000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=8292, stack(0x0000000006b50000,0x0000000006c50000)]
+  0x0000000006108000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=1364, stack(0x00000000069c0000,0x0000000006ac0000)]
+  0x0000000006106800 JavaThread "Attach Listener" daemon [_thread_blocked, id=6996, stack(0x0000000006790000,0x0000000006890000)]
+  0x0000000006105000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4464, stack(0x0000000006660000,0x0000000006760000)]
+  0x0000000005fd6800 JavaThread "Finalizer" daemon [_thread_blocked, id=3952, stack(0x0000000005da0000,0x0000000005ea0000)]
+  0x0000000005fcb000 JavaThread "Reference Handler" daemon [_thread_blocked, id=2328, stack(0x0000000006400000,0x0000000006500000)]
+=>0x0000000002203800 JavaThread "main" [_thread_in_Java, id=8080, stack(0x0000000002700000,0x0000000002800000)]
+
+Other Threads:
+  0x0000000005fbe800 VMThread [stack: 0x00000000061f0000,0x00000000062f0000] [id=9196]
+  0x0000000006c58800 WatcherThread [stack: 0x0000000007160000,0x0000000007260000] [id=7584]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 13696K, used 8407K [0x00000000f0b60000, 0x00000000f1aa0000, 0x0000000100000000)
+  eden space 11776K, 71% used [0x00000000f0b60000,0x00000000f1395ec0,0x00000000f16e0000)
+  from space 1920K, 0% used [0x00000000f18c0000,0x00000000f18c0000,0x00000000f1aa0000)
+  to   space 1920K, 0% used [0x00000000f16e0000,0x00000000f16e0000,0x00000000f18c0000)
+ PSOldGen        total 31360K, used 0K [0x00000000d2200000, 0x00000000d40a0000, 0x00000000f0b60000)
+  object space 31360K, 0% used [0x00000000d2200000,0x00000000d2200000,0x00000000d40a0000)
+ PSPermGen       total 21248K, used 8054K [0x00000000cd000000, 0x00000000ce4c0000, 0x00000000d2200000)
+  object space 21248K, 37% used [0x00000000cd000000,0x00000000cd7dd9b8,0x00000000ce4c0000)
+
+Code Cache  [0x0000000002800000, 0x0000000002a70000, 0x0000000005800000)
+ total_blobs=293 nmethods=29 adapters=216 free_code_cache=48665Kb largest_free_block=49827904
+
+Dynamic libraries:
+0x000000013fb70000 - 0x000000013fba3000 	C:\Program Files\Java\jdk1.7.0\bin\java.exe
+0x0000000077610000 - 0x00000000777b9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000773a0000 - 0x00000000774bf000 	C:\Windows\system32\kernel32.dll
+0x000007fefdc90000 - 0x000007fefdcfc000 	C:\Windows\system32\KERNELBASE.dll
+0x000007feff4b0000 - 0x000007feff58b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefeff0000 - 0x000007feff08f000 	C:\Windows\system32\msvcrt.dll
+0x000007feff130000 - 0x000007feff14f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff770000 - 0x000007feff89d000 	C:\Windows\system32\RPCRT4.dll
+0x00000000772a0000 - 0x000000007739a000 	C:\Windows\system32\USER32.dll
+0x000007fefde70000 - 0x000007fefded7000 	C:\Windows\system32\GDI32.dll
+0x000007fefdee0000 - 0x000007fefdeee000 	C:\Windows\system32\LPK.dll
+0x000007fefedf0000 - 0x000007fefeeb9000 	C:\Windows\system32\USP10.dll
+0x000007fefc3e0000 - 0x000007fefc5d4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefdfe0000 - 0x000007fefe051000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefda00000 - 0x000007fefda57000 	C:\Windows\system32\apphelp.dll
+0x000007fefa8b0000 - 0x000007fefad17000 	C:\Windows\AppPatch\AppPatch64\AcXtrnal.DLL
+0x000007fefde40000 - 0x000007fefde6e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefeec0000 - 0x000007fefefc9000 	C:\Windows\system32\MSCTF.dll
+0x000000006a070000 - 0x000000006a141000 	C:\Program Files\Java\jdk1.7.0\jre\bin\msvcr100.dll
+0x000000005f680000 - 0x000000005fd4e000 	C:\Program Files\Java\jdk1.7.0\jre\bin\server\jvm.dll
+0x000007fef3eb0000 - 0x000007fef3eb9000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefdf90000 - 0x000007fefdfdd000 	C:\Windows\system32\WS2_32.dll
+0x000007feff150000 - 0x000007feff158000 	C:\Windows\system32\NSI.dll
+0x000007fefb480000 - 0x000007fefb4bb000 	C:\Windows\system32\WINMM.dll
+0x00000000777d0000 - 0x00000000777d7000 	C:\Windows\system32\PSAPI.DLL
+0x00000000739e0000 - 0x00000000739ef000 	C:\Program Files\Java\jdk1.7.0\jre\bin\verify.dll
+0x000000006a470000 - 0x000000006a498000 	C:\Program Files\Java\jdk1.7.0\jre\bin\java.dll
+0x000000006a400000 - 0x000000006a415000 	C:\Program Files\Java\jdk1.7.0\jre\bin\zip.dll
+0x0000000064e20000 - 0x0000000064fb3000 	C:\Program Files\Java\jdk1.7.0\jre\bin\awt.dll
+0x000007feff160000 - 0x000007feff237000 	C:\Windows\system32\OLEAUT32.dll
+0x000007feff240000 - 0x000007feff443000 	C:\Windows\system32\ole32.dll
+0x000000006a220000 - 0x000000006a239000 	C:\Program Files\Java\jdk1.7.0\jre\bin\net.dll
+0x000007fefd530000 - 0x000007fefd585000 	C:\Windows\system32\mswsock.dll
+0x000007fefd870000 - 0x000007fefd877000 	C:\Windows\System32\wship6.dll
+0x000000006a200000 - 0x000000006a211000 	C:\Program Files\Java\jdk1.7.0\jre\bin\nio.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: com.mycompany.avt_jms.App
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.7.0
+PATH=C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Broadcom\Broadcom 802.11\Driver;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\12.0\DLLShared\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Java\jdk1.7.0\bin;C:\Program Files\SlikSvn\bin;C:\Program Files\TortoiseSVN\bin;C:\springsource\apache-maven-3.0.4\bin
+USERNAME=USer
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, popcnt
+
+Memory: 4k page, physical 3004276k(615244k free), swap 6192960k(750500k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0-b17) for windows-amd64 JRE (1.7.0-b147), built on Jun 27 2011 02:19:45 by "java_re" with unknown MS VC++:1600
+
+time: Sun Dec 23 21:45:43 2012
+elapsed time: 1 seconds
+

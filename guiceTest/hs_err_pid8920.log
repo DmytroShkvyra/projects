@@ -1,0 +1,226 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000077660895, pid=8920, tid=3772
+#
+# JRE version: 7.0-b147
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0-b17 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [ntdll.dll+0x50895]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002272000):  JavaThread "main" [_thread_in_Java, id=3772, stack(0x00000000025a0000,0x00000000026a0000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xffffffffffffffff
+
+Registers:
+RAX=0x000000000269d438, RBX=0x0000000000000002, RCX=0x000000000269d508, RDX=0x000000000269d478
+RSP=0x000000000269d428, RBP=0x000007fedc4c6820, RSI=0x0000000000000020, RDI=0x0000000000000000
+R8 =0x0000000002690000, R9 =0x0000000000000003, R10=0x0000000000000000, R11=0x0000000000015e69
+R12=0x0000000000000000, R13=0x0000000000000050, R14=0x0000000000000003, R15=0x0000000002272000
+RIP=0x0000000077660895, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x000000000269d428)
+0x000000000269d428:   0000000000000202 000000007761b239
+0x000000000269d438:   000007fffffd7000 000000000790e110
+0x000000000269d448:   0000000000000006 0000000000000000
+0x000000000269d458:   0000000002272001 00000000072813f0
+0x000000000269d468:   000000005feead48 000000000790e110
+0x000000000269d478:   00000000026a0000 0000000002690000
+0x000000000269d488:   0000000007281728 000000000269d601
+0x000000000269d498:   0000000000000000 000000000269d650
+0x000000000269d4a8:   000000000269d820 0000000000000008
+0x000000000269d4b8:   0000000006defff0 000000000269dcb0
+0x000000000269d4c8:   00000000026d743a 00000000026d73d0
+0x000000000269d4d8:   0000000000000000 0000000000000000
+0x000000000269d4e8:   000000000269dcb0 0000000102272000
+0x000000000269d4f8:   0000000006deffa0 000000000269dd10
+0x000000000269d508:   00000000026a6330 00000000026a5350
+0x000000000269d518:   0000000000000000 00000000f0e5d060 
+
+Instructions: (pc=0x0000000077660895)
+0x0000000077660875:   d0 00 00 00 4c 89 a1 d8 00 00 00 4c 89 a9 e0 00
+0x0000000077660885:   00 00 4c 89 b1 e8 00 00 00 4c 89 b9 f0 00 00 00
+0x0000000077660895:   0f ae 81 00 01 00 00 0f 29 81 a0 01 00 00 0f 29
+0x00000000776608a5:   89 b0 01 00 00 0f 29 91 c0 01 00 00 0f 29 99 d0 
+
+
+Register to memory mapping:
+
+RAX=0x000000000269d438 is pointing into the stack for thread: 0x0000000002272000
+RBX=0x0000000000000002 is an unknown value
+RCX=0x000000000269d508 is pointing into the stack for thread: 0x0000000002272000
+RDX=0x000000000269d478 is pointing into the stack for thread: 0x0000000002272000
+RSP=0x000000000269d428 is pointing into the stack for thread: 0x0000000002272000
+RBP=0x000007fedc4c6820 is an unknown value
+RSI=0x0000000000000020 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x0000000002690000 is pointing into the stack for thread: 0x0000000002272000
+R9 =0x0000000000000003 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000015e69 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000000000050 is an unknown value
+R14=0x0000000000000003 is an unknown value
+R15=0x0000000002272000 is a thread
+
+
+Stack: [0x00000000025a0000,0x00000000026a0000],  sp=0x000000000269d428,  free space=1013k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ntdll.dll+0x50895]  RtlCaptureContext+0x85
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+v  blob 0x00000000026d74ff
+j  java.lang.String.equals(Ljava/lang/Object;)Z+8
+j  com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.xmlDecl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V+9
+j  com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.xmlDecl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/sun/org/apache/xerces/internal/xni/Augmentations;)V+41
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanXMLDeclOrTextDecl(Z)V+132
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$XMLDeclDriver.next()I+217
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next()I+4
+j  com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next()I+31
+j  com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Z)Z+9
+j  com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Z)Z+123
+j  com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V+29
+j  com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Lcom/sun/org/apache/xerces/internal/xni/parser/XMLInputSource;)V+9
+j  com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Lorg/xml/sax/InputSource;)V+43
+j  com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Lorg/xml/sax/InputSource;)V+53
+j  org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.processPersistenceXML(Ljava/net/URL;Ljava/io/InputStream;Ljava/lang/ClassLoader;)Ljava/util/List;+111
+j  org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.processPersistenceArchive(Lorg/eclipse/persistence/jpa/Archive;Ljava/lang/ClassLoader;)Ljava/util/List;+15
+j  org.eclipse.persistence.internal.jpa.deployment.PersistenceUnitProcessor.getPersistenceUnits(Lorg/eclipse/persistence/jpa/Archive;Ljava/lang/ClassLoader;)Ljava/util/List;+2
+j  org.eclipse.persistence.internal.jpa.deployment.JPAInitializer.findPersistenceUnitInfoInArchive(Ljava/lang/String;Lorg/eclipse/persistence/jpa/Archive;Ljava/util/Map;)Lorg/eclipse/persistence/internal/jpa/deployment/SEPersistenceUnitInfo;+5
+j  org.eclipse.persistence.internal.jpa.deployment.JPAInitializer.findPersistenceUnitInfoInArchives(Ljava/lang/String;Ljava/util/Map;)Lorg/eclipse/persistence/internal/jpa/deployment/SEPersistenceUnitInfo;+79
+j  org.eclipse.persistence.internal.jpa.deployment.JPAInitializer.findPersistenceUnitInfo(Ljava/lang/String;Ljava/util/Map;)Lorg/eclipse/persistence/internal/jpa/deployment/SEPersistenceUnitInfo;+32
+j  org.eclipse.persistence.jpa.PersistenceProvider.createEntityManagerFactory(Ljava/lang/String;Ljava/util/Map;)Ljavax/persistence/EntityManagerFactory;+53
+j  javax.persistence.Persistence.createEntityManagerFactory(Ljava/lang/String;Ljava/util/Map;)Ljavax/persistence/EntityManagerFactory;+49
+j  example.persist.DbModule.provideEntityManagerFactory()Ljavax/persistence/EntityManagerFactory;+66
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+87
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+57
+j  com.google.inject.internal.ProviderMethod.get()Ljava/lang/Object;+57
+j  com.google.inject.internal.InternalFactoryToProviderAdapter.get(Lcom/google/inject/internal/Errors;Lcom/google/inject/internal/InternalContext;Lcom/google/inject/spi/Dependency;Z)Ljava/lang/Object;+14
+j  com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(Lcom/google/inject/internal/InternalContext;)Ljava/lang/Object;+19
+j  com.google.inject.internal.InjectorImpl.callInContext(Lcom/google/inject/internal/ContextualCallable;)Ljava/lang/Object;+62
+j  com.google.inject.internal.ProviderToInternalFactoryAdapter.get()Ljava/lang/Object;+21
+j  com.google.inject.Scopes$1$1.get()Ljava/lang/Object;+23
+j  com.google.inject.internal.InternalFactoryToProviderAdapter.get(Lcom/google/inject/internal/Errors;Lcom/google/inject/internal/InternalContext;Lcom/google/inject/spi/Dependency;Z)Ljava/lang/Object;+14
+j  com.google.inject.internal.InjectorImpl$4$1.call(Lcom/google/inject/internal/InternalContext;)Ljava/lang/Object;+32
+j  com.google.inject.internal.InjectorImpl.callInContext(Lcom/google/inject/internal/ContextualCallable;)Ljava/lang/Object;+62
+j  com.google.inject.internal.InjectorImpl$4.get()Ljava/lang/Object;+25
+j  com.google.inject.spi.ProviderLookup$1.get()Ljava/lang/Object;+27
+j  com.google.inject.internal.ProviderMethod.get()Ljava/lang/Object;+36
+j  com.google.inject.internal.InternalFactoryToProviderAdapter.get(Lcom/google/inject/internal/Errors;Lcom/google/inject/internal/InternalContext;Lcom/google/inject/spi/Dependency;Z)Ljava/lang/Object;+14
+j  com.google.inject.internal.SingleParameterInjector.inject(Lcom/google/inject/internal/Errors;Lcom/google/inject/internal/InternalContext;)Ljava/lang/Object;+27
+j  com.google.inject.internal.SingleParameterInjector.getAll(Lcom/google/inject/internal/Errors;Lcom/google/inject/internal/InternalContext;[Lcom/google/inject/internal/SingleParameterInjector;)[Ljava/lang/Object;+48
+j  com.google.inject.internal.ConstructorInjector.construct(Lcom/google/inject/internal/Errors;Lcom/google/inject/internal/InternalContext;Ljava/lang/Class;Z)Ljava/lang/Object;+63
+j  com.google.inject.internal.ConstructorBindingImpl$Factory.get(Lcom/google/inject/internal/Errors;Lcom/google/inject/internal/InternalContext;Lcom/google/inject/spi/Dependency;Z)Ljava/lang/Object;+61
+j  com.google.inject.internal.InjectorImpl$4$1.call(Lcom/google/inject/internal/InternalContext;)Ljava/lang/Object;+32
+j  com.google.inject.internal.InjectorImpl.callInContext(Lcom/google/inject/internal/ContextualCallable;)Ljava/lang/Object;+34
+j  com.google.inject.internal.InjectorImpl$4.get()Ljava/lang/Object;+25
+j  com.google.inject.internal.InjectorImpl.getInstance(Ljava/lang/Class;)Ljava/lang/Object;+5
+j  example.xml.Main.main([Ljava/lang/String;)V+55
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000006021000 JavaThread "com.google.inject.internal.util.$Finalizer" daemon [_thread_blocked, id=3244, stack(0x0000000005a80000,0x0000000005b80000)]
+  0x0000000006065800 JavaThread "Service Thread" daemon [_thread_blocked, id=940, stack(0x0000000006a80000,0x0000000006b80000)]
+  0x000000000605b000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=5932, stack(0x00000000068d0000,0x00000000069d0000)]
+  0x000000000604f000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=8492, stack(0x0000000006750000,0x0000000006850000)]
+  0x0000000006048800 JavaThread "Attach Listener" daemon [_thread_blocked, id=7216, stack(0x00000000065e0000,0x00000000066e0000)]
+  0x0000000006047000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=8888, stack(0x0000000005d80000,0x0000000005e80000)]
+  0x0000000005f38000 JavaThread "Finalizer" daemon [_thread_blocked, id=1544, stack(0x0000000006360000,0x0000000006460000)]
+  0x0000000005f2d000 JavaThread "Reference Handler" daemon [_thread_blocked, id=8116, stack(0x0000000006230000,0x0000000006330000)]
+=>0x0000000002272000 JavaThread "main" [_thread_in_Java, id=3772, stack(0x00000000025a0000,0x00000000026a0000)]
+
+Other Threads:
+  0x0000000005f21000 VMThread [stack: 0x00000000060c0000,0x00000000061c0000] [id=6800]
+  0x0000000006072800 WatcherThread [stack: 0x0000000006c10000,0x0000000006d10000] [id=8004]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 13696K, used 5336K [0x00000000f0b60000, 0x00000000f1aa0000, 0x0000000100000000)
+  eden space 11776K, 29% used [0x00000000f0b60000,0x00000000f0eba680,0x00000000f16e0000)
+  from space 1920K, 99% used [0x00000000f16e0000,0x00000000f18bbd78,0x00000000f18c0000)
+  to   space 1920K, 0% used [0x00000000f18c0000,0x00000000f18c0000,0x00000000f1aa0000)
+ PSOldGen        total 31360K, used 1519K [0x00000000d2200000, 0x00000000d40a0000, 0x00000000f0b60000)
+  object space 31360K, 4% used [0x00000000d2200000,0x00000000d237bf50,0x00000000d40a0000)
+ PSPermGen       total 21248K, used 8774K [0x00000000cd000000, 0x00000000ce4c0000, 0x00000000d2200000)
+  object space 21248K, 41% used [0x00000000cd000000,0x00000000cd891910,0x00000000ce4c0000)
+
+Code Cache  [0x00000000026a0000, 0x0000000002910000, 0x00000000056a0000)
+ total_blobs=293 nmethods=47 adapters=198 free_code_cache=48647Kb largest_free_block=49807168
+
+Dynamic libraries:
+0x000000013fe80000 - 0x000000013feb3000 	C:\Program Files\Java\jdk1.7.0\bin\java.exe
+0x0000000077610000 - 0x00000000777b9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000773a0000 - 0x00000000774bf000 	C:\Windows\system32\kernel32.dll
+0x000007fefdc90000 - 0x000007fefdcfc000 	C:\Windows\system32\KERNELBASE.dll
+0x000007feff4b0000 - 0x000007feff58b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefeff0000 - 0x000007feff08f000 	C:\Windows\system32\msvcrt.dll
+0x000007feff130000 - 0x000007feff14f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff770000 - 0x000007feff89d000 	C:\Windows\system32\RPCRT4.dll
+0x00000000772a0000 - 0x000000007739a000 	C:\Windows\system32\USER32.dll
+0x000007fefde70000 - 0x000007fefded7000 	C:\Windows\system32\GDI32.dll
+0x000007fefdee0000 - 0x000007fefdeee000 	C:\Windows\system32\LPK.dll
+0x000007fefedf0000 - 0x000007fefeeb9000 	C:\Windows\system32\USP10.dll
+0x000007fefc3e0000 - 0x000007fefc5d4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefdfe0000 - 0x000007fefe051000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefda00000 - 0x000007fefda57000 	C:\Windows\system32\apphelp.dll
+0x000007fedc2a0000 - 0x000007fedc707000 	C:\Windows\AppPatch\AppPatch64\AcXtrnal.DLL
+0x000007fefde40000 - 0x000007fefde6e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefeec0000 - 0x000007fefefc9000 	C:\Windows\system32\MSCTF.dll
+0x000000006a160000 - 0x000000006a231000 	C:\Program Files\Java\jdk1.7.0\jre\bin\msvcr100.dll
+0x000000005fd50000 - 0x000000006041e000 	C:\Program Files\Java\jdk1.7.0\jre\bin\server\jvm.dll
+0x000007fef3eb0000 - 0x000007fef3eb9000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefdf90000 - 0x000007fefdfdd000 	C:\Windows\system32\WS2_32.dll
+0x000007feff150000 - 0x000007feff158000 	C:\Windows\system32\NSI.dll
+0x000007fefb480000 - 0x000007fefb4bb000 	C:\Windows\system32\WINMM.dll
+0x00000000777d0000 - 0x00000000777d7000 	C:\Windows\system32\PSAPI.DLL
+0x00000000739e0000 - 0x00000000739ef000 	C:\Program Files\Java\jdk1.7.0\jre\bin\verify.dll
+0x000000006a470000 - 0x000000006a498000 	C:\Program Files\Java\jdk1.7.0\jre\bin\java.dll
+0x000000006a400000 - 0x000000006a415000 	C:\Program Files\Java\jdk1.7.0\jre\bin\zip.dll
+0x000000006a130000 - 0x000000006a149000 	C:\Program Files\Java\jdk1.7.0\jre\bin\net.dll
+0x000007fefd530000 - 0x000007fefd585000 	C:\Windows\system32\mswsock.dll
+0x000007fefd870000 - 0x000007fefd877000 	C:\Windows\System32\wship6.dll
+0x000000006a110000 - 0x000000006a121000 	C:\Program Files\Java\jdk1.7.0\jre\bin\nio.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: example.xml.Main
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.7.0
+PATH=C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Broadcom\Broadcom 802.11\Driver;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\12.0\DLLShared\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Java\jdk1.7.0\bin;C:\Program Files\SlikSvn\bin;C:\Program Files\TortoiseSVN\bin;C:\springsource\apache-maven-3.0.4\bin
+USERNAME=USer
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, popcnt
+
+Memory: 4k page, physical 3004276k(717760k free), swap 6192960k(553548k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0-b17) for windows-amd64 JRE (1.7.0-b147), built on Jun 27 2011 02:19:45 by "java_re" with unknown MS VC++:1600
+
+time: Sun Dec 23 21:17:57 2012
+elapsed time: 2 seconds
+
