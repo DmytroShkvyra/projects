@@ -20,7 +20,7 @@ local.properties
 ## Maven
 #################
 target/
-target/*.*
+*./target/*.*
 
 # External tool builders
 .externalToolBuilders/
@@ -167,4 +167,3 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
-target
