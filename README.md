@@ -3,4 +3,4 @@ projects
 
 Test create
 
-Test update on server
+Test update on client
