@@ -3,6 +3,4 @@ projects
 
 Test create
 
-Test update
-f
-new value
+Test update on server
