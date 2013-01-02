@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../IrrationalLogViewer/IrrationalLogViewer.iml" filepath="$PROJECT_DIR$/../IrrationalLogViewer/IrrationalLogViewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ambari.iml" filepath="$PROJECT_DIR$/ambari.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ambari-agent/ambari-agent.iml" filepath="$PROJECT_DIR$/ambari-agent/ambari-agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ambari-project/ambari-project.iml" filepath="$PROJECT_DIR$/ambari-project/ambari-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ambari-server/ambari-server.iml" filepath="$PROJECT_DIR$/ambari-server/ambari-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ambari-web/ambari-web.iml" filepath="$PROJECT_DIR$/ambari-web/ambari-web.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,19 @@
+syntax:glob
+.classpath
+.project
+.settings
+.idea/
+.iml/
+.DS_Store
+target
+/ambari-web/public/
+/ambari-web/node_modules/
+*.pyc
+*.py~
+*.iml
+.idea/
+*.class
+dist
+target
+syntax: regexp
+^\.idea$

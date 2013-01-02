@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Mon Dec 31 14:24:08 EET 2012:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872): instance a816c00e-013b-f0eb-4341-00000e43e920 
+on database directory memory:C:\projects\ambari\ambari-server\myDB  with class loader sun.misc.Launcher$AppClassLoader@74ba86ef 
+Loaded from file:/C:/Users/User/.m2/repository/org/apache/derby/derby/10.9.1.0/derby-10.9.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_10-b18
+user.dir=C:\projects\ambari\ambari-server
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
