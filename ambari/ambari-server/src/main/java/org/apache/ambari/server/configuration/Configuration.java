@@ -96,7 +96,7 @@ public class Configuration {
   public static final String SERVER_JDBC_USER_NAME_KEY =
       "server.jdbc.user.name";
   private static final String SERVER_JDBC_USER_NAME_DEFAULT =
-      "ambari-server";
+      /*"ambari-server"*/ "postgres";
   public static final String SERVER_JDBC_USER_PASSWD_KEY =
       "server.jdbc.user.passwd";
   private static final String SERVER_JDBC_USER_PASSWD_DEFAULT =

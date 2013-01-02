@@ -344,6 +344,7 @@ public class AmbariServer {
   protected void addInMemoryUsers() {
     if (configs.getPersistenceType() == PersistenceType.IN_MEMORY) {
       LOG.info("In-memory database is used - creating default users");
+      System.out.println("In-memory database is used - creating default users");
       Users users = injector.getInstance(Users.class);
 
       users.createDefaultRoles();
