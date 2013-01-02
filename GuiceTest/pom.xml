@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mycompany</groupId>
+	<artifactId>GuiceTest</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>GuiceTest mvc app</name>
+	<description>MVC app built using Jersey ${jersey.version}, Guice ${guice.version}, DUEL views ${duel.version}, DUEL merge ${merge.version}</description>
+
+	<properties>
+            
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<resourcesDir>${project.basedir}/src/main/resources</resourcesDir>
+		<mvc.version>0.9.1</mvc.version>
+		<duel.version>0.8.5</duel.version>
+		<merge.version>0.5.7</merge.version>
+		<jackson.version>2.1.2</jackson.version>
+		<jacksonXML.version>2.1.2</jacksonXML.version>
+		<guice.version>3.0</guice.version>
+		<jersey.version>1.9.1</jersey.version>
+		<slf4j.version>1.7.2</slf4j.version>
+		<servlet.version>3.0.1</servlet.version>
+		<junit.version>4.11</junit.version>
+		<m2e.version>1.0.1</m2e.version>
+		<jrebel.version>1.1.3</jrebel.version>
+		<javac.version>1.6</javac.version>
+
+		<duel.clientPrefix>App</duel.clientPrefix>
+		<duel.serverPrefix>com.mycompany.guicetest.views</duel.serverPrefix>
+		<duel.sourceDir>${resourcesDir}/views/</duel.sourceDir>
+		<duel.clientPath>/js/views/</duel.clientPath>
+
+		<merge.cdnMapFile>/cdn.properties</merge.cdnMapFile>
+		<merge.cdnRoot>/cdn/</merge.cdnRoot>
+		<merge.cdnFiles>.ico .png .jpg .gif .eot .woff .ttf .svg .svgz</merge.cdnFiles>
+	 <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
+	</properties>
+
+	<dependencies>
+		<!-- JUnit runtime -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Servlet interfaces -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- SLF4J runtime -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pseudocode</groupId>
+			<artifactId>slf4j-compact</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+
+		<!-- Guice runtime -->
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+		 <type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-assistedinject</artifactId>
+			<version>${guice.version}</version>
+		</dependency>
+
+		<!-- Jersey runtime -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<!-- Jersey-Guice runtime -->
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-guice</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<!-- Jackson JAX-RS provider -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-provider</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-xml-provider</artifactId>
+			<version>${jacksonXML.version}</version>
+		</dependency>
+
+		<!-- DUEL-MVC runtime -->
+		<dependency>
+			<groupId>org.duelengine</groupId>
+			<artifactId>duel-mvc</artifactId>
+			<version>${mvc.version}</version>
+		</dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey</groupId>
+	  <artifactId>jersey-atom</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey</groupId>
+	  <artifactId>jersey-json</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey</groupId>
+	  <artifactId>jersey-core</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey</groupId>
+	  <artifactId>jersey-client</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey.contribs</groupId>
+	  <artifactId>jersey-atom-abdera</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey.contribs</groupId>
+	  <artifactId>jersey-apache-client</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey.contribs</groupId>
+	  <artifactId>jersey-spring</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey.contribs</groupId>
+	  <artifactId>jersey-multipart</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey.contribs</groupId>
+	  <artifactId>jersey-simple-server</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey.contribs.jersey-oauth</groupId>
+	  <artifactId>oauth-client</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey.contribs.jersey-oauth</groupId>
+	  <artifactId>oauth-server</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.jersey.contribs.jersey-oauth</groupId>
+	  <artifactId>oauth-signature</artifactId>
+	  <version>${jersey.version}</version>
+	 </dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<resources>
+			<resource>
+				<directory>${resourcesDir}</directory>
+				<excludes>
+					<!-- exclude DUEL sources from target output -->
+					<exclude>**/*.duel</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<!-- Generate special classes-only JAR -->
+			<!-- http://eureka.ykyuen.info/2009/10/30/maven-dependency-on-jarwar-package/ -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<attachClasses>true</attachClasses>
+					<classesClassifier>classes</classesClassifier>
+				</configuration>
+			</plugin>
+
+			<!-- DUEL Compiler -->
+			<plugin>
+				<groupId>org.duelengine</groupId>
+				<artifactId>duel-maven-plugin</artifactId>
+				<version>${duel.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<clientPrefix>${duel.clientPrefix}</clientPrefix>
+							<serverPrefix>${duel.serverPrefix}</serverPrefix>
+							<inputDir>${duel.sourceDir}</inputDir>
+							<outputClientPath>${duel.clientPath}</outputClientPath>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Merge Builder -->
+			<plugin>
+				<groupId>org.duelengine</groupId>
+				<artifactId>merge-maven-plugin</artifactId>
+				<version>${merge.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>merge</goal>
+						</goals>
+						<configuration>
+							<cdnMapFile>${merge.cdnMapFile}</cdnMapFile>
+							<cdnRoot>${merge.cdnRoot}</cdnRoot>
+							<cdnFiles>${merge.cdnFiles}</cdnFiles>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- JRebel Config -->
+			<plugin>
+				<groupId>org.zeroturnaround</groupId>
+				<artifactId>jrebel-maven-plugin</artifactId>
+				<version>${jrebel.version}</version>
+				<configuration>
+					<web>
+						<resources>
+							<resource>
+								<target>${merge.cdnRoot}</target>
+								<directory>${project.build.directory}/${project.build.finalName}${merge.cdnRoot}</directory>
+							</resource>
+							<resource>
+								<target>${duel.clientPath}</target>
+								<directory>${project.build.directory}/${project.build.finalName}${duel.clientPath}</directory>
+							</resource>
+						</resources>
+					</web>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-rebel-xml</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!-- Java compiler -->
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>${javac.version}</source>
+						<target>${javac.version}</target>
+					</configuration>
+				</plugin>
+
+				<!-- http://wiki.eclipse.org/M2E_plugin_execution_not_covered -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>${m2e.version}</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.duelengine</groupId>
+										<artifactId>duel-maven-plugin</artifactId>
+										<versionRange>[${duel.version},)</versionRange>
+										<goals>
+											<goal>generate</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.duelengine</groupId>
+										<artifactId>merge-maven-plugin</artifactId>
+										<versionRange>[${merge.version},)</versionRange>
+										<goals>
+											<goal>merge</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.zeroturnaround</groupId>
+										<artifactId>jrebel-maven-plugin</artifactId>
+										<versionRange>[${jrebel.version},)</versionRange>
+										<goals>
+											<goal>generate</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins> 
+		</pluginManagement>
+	</build>
+</project>

@@ -1,0 +1,8 @@
+<view name="FooPage"><call view="Page">
+
+<part name="head">
+	<title>GuiceTest: <%= data.path %></title>
+</part>
+
+<h1>GuiceTest: <%= data.path %></h1>
+<p><%= data.date %></p>
