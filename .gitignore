@@ -21,6 +21,7 @@ local.properties
 #################
 */target/
 */target/*.*
+*/nbproject/
 
 # External tool builders
 .externalToolBuilders/
