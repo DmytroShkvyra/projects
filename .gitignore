@@ -169,3 +169,5 @@ pip-log.txt
 .DS_Store
 target
 target
+/FFTTest/nbproject/private/
+/JNA/nbproject/private/
