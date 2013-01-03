@@ -85,7 +85,7 @@ public class App  extends Frame
     
     public static void main( String[] args )
     {
-	ApplicationContext context = new ClassPathXmlApplicationContext("/com/mycompany/avt_jms/system-config.xml");
+	ApplicationContext context = new ClassPathXmlApplicationContext("com/mycompany/avt_jms/system-config.xml");
 
     }
 }
