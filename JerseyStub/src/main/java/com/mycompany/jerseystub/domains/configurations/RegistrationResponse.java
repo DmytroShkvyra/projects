@@ -18,7 +18,11 @@
 
 package com.mycompany.jerseystub.domains.configurations;
 
+
 import java.util.List;
+import org.apache.ambari.server.agent.RegistrationStatus;
+import org.apache.ambari.server.agent.StatusCommand;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 
@@ -27,30 +31,35 @@ import org.codehaus.jackson.annotate.JsonProperty;
  * Controller to Agent response data model.
  *
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RegistrationResponse {
   @JsonProperty("response")
-  private String response;
+  private RegistrationStatus response;
   
   //Response id to start with, usually zero.
   @JsonProperty("responseId")
   private long responseId;
   
   @JsonProperty("statusCommands")
-  private List<String> statusCommands = null;
+  private List<StatusCommand> statusCommands = null;
 
-  public String getResponse() {
+  public RegistrationStatus getResponse() {
     return response;
   }
 
-  public void setResponse(String response) {
+  public void setResponse(RegistrationStatus response) {
     this.response = response;
   }
 
-  public List<String> getStatusCommands() {
+  public void setResponseStatus(RegistrationStatus response) {
+    this.response = response;
+  }
+  
+  public List<StatusCommand> getStatusCommands() {
     return statusCommands;
   }
 
-  public void setStatusCommands(List<String> statusCommands) {
+  public void setStatusCommands(List<StatusCommand> statusCommands) {
     this.statusCommands = statusCommands;
   }
 
@@ -70,14 +79,4 @@ public class RegistrationResponse {
             ", statusCommands=" + statusCommands +
             '}';
   }
-
-   /* public String getResponseStatus() {
-        return responseStatus;
-    }
-*/
-    public void setResponseStatus(String responseStatus) {
-        this.response = responseStatus;
-    }
-  
-  
 }
