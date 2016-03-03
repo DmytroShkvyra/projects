@@ -32,8 +32,46 @@ public class ConfigProperties {
     public String dfs_datanode_data_dir_perm;
     @XmlElement
     public String hbase_hdfs_root_dir;
+    @XmlElement(name = "mapred.job.tracker")
+    public String mapred_job_tracker;
+    @XmlElement(name = "mapreduce.history.server.embedded")
+    public String mapreduce_history_server_embedded;
+    @XmlElement(name = "mapreduce.history.server.http.address")
+    public String mapreduce_history_server_http_address;
+    @XmlElement(name = "hbase.rootdir")
+    public String hbase_rootdir;
+    @XmlElement(name = "hbase.cluster.distributed")
+    public String hbase_cluster_distributed;  
+    @XmlElement(name = "hbase.zookeeper.quorum")
+    public String hbase_zookeeper_quorum;   
+    @XmlElement(name = "zookeeper.session.timeout")
+    public String zookeeper_session_timeout;
+    @XmlElement
+    public String nagios_web_login;
+    @XmlElement
+    public String nagios_web_password;        
+    @XmlElement
+    public String nagios_contact; 
+    @XmlElement(name = "core-site")
+    public String core_site;
+    @XmlElement(name = "hdfs-site")
+    public String hdfs_site;      
+    @XmlElement
+    public String global;
+    @XmlElement(name = "mapred-site")
+    public String mapred_site;
+    @XmlElement(name = "hbase-site")
+    public String hbase_site;
+    @XmlElement(name = "hbase-env")
+    public String hbase_env;
+    @XmlElement(name = "nagios-global")
+    public String nagios_global;
+    
     @XmlElement
     public ConfigProperties properties;
+    @XmlElement
+    public ConfigProperties config;    
+    
     
 
     public ConfigProperties() {

@@ -10,6 +10,8 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name='viewport' content="width=device-width, initial-scale=1" />
+	<script src='/test/js/dtmf_play.js'></script>
 	<title>Add Task</title>
 </head>
 
@@ -30,10 +32,11 @@
 		</tr>		
 
 		<tr>
-			<td colspan="3"><input type="submit" value="Add Task"/></td>
+			<td colspan="3"><input type="submit" value="Add Task" onmousedown="dialTone(941.0, 1209.0)" onmouseup="stop()" data-freq='941.0, 1209.0'/></td>
 		</tr>
 	</table>
 </form:form>
+<input type="submit" value="Play" onmousedown="playDialtoneString('1234567890*#ABC')" data-freq='941.0, 1209.0'/>
 
 </div>
 </body>

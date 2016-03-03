@@ -9,7 +9,8 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<!--link rel="stylesheet" href="<c:url value="/styles/springsource.css"/>" type="text/css"/-->
+	<meta name='viewport' content="width=device-width, initial-scale=1" />
+	<!--link rel="stylesheet" href="<c:url value="/test/styles/style.css"/>" type="text/css"/-->
 	<title>Task Details</title>
 </head>
 

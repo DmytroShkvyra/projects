@@ -95,20 +95,21 @@
 	  <artifactId>jersey-simple-server</artifactId>
 	  <version>${jersey.version}</version>
 	 </dependency>
-	 <dependency>
-	  <groupId>com.sun.jersey.contribs.jersey-oauth</groupId>
-	  <artifactId>oauth-client</artifactId>
-	  <version>${jersey.version}</version>
-	 </dependency>
-	 <dependency>
-	  <groupId>com.sun.jersey.contribs.jersey-oauth</groupId>
-	  <artifactId>oauth-server</artifactId>
-	  <version>${jersey.version}</version>
-	 </dependency>
-	 <dependency>
-	  <groupId>com.sun.jersey.contribs.jersey-oauth</groupId>
-	  <artifactId>oauth-signature</artifactId>
-	  <version>${jersey.version}</version>
-	 </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.5.6</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-jdk14</artifactId>
+      <version>1.5.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.ambari</groupId>
+      <artifactId>ambari-server</artifactId>
+      <version>1.2.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 </project>

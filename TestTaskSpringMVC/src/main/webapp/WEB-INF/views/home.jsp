@@ -4,8 +4,13 @@
 <html>
 <head>
 	<title>Home</title>
+	<meta name='viewport' content="width=device-width, initial-scale=1" />
+	<script data-turbolinks-track="true" src="/test/js/goertzel.js"></script>
+<script data-turbolinks-track="true" src="/test/js/dtmf.js"></script>
+<script data-turbolinks-track="true" src="/test/js/dtmf_decoder.js"></script>
 </head>
 <body>
+    <div id="output"></div>
 <h1> 
 	Это тестовое приложение для демонстрации интеграции Spring MVC, Spring Security, Apache Tiles и ORM на примере Hibernate.
 
@@ -20,7 +25,7 @@
 	</p>
 	<ul>
         <li>
-            Неавторизованые пользователи могут лиш просатривать список задач
+            Неавторизованые пользователи могут лиш просматривать список задач
         </li>
         <li>
             Администратор может ограниченно редактировать (не может менять статус задачи) , просматривать и удалять задачи
