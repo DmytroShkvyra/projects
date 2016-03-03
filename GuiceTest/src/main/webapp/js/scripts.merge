@@ -1,8 +1,0 @@
-# client-side template engine
-/js/duel.js
-
-# app-specific logic
-/js/app.js
-
-# auto-generated from src/main/resources/views/Menu.duel
-/js/views/App/Menu.js
